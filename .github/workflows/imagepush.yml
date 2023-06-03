@@ -33,7 +33,7 @@ jobs:
         IMAGE_TAG: v1.0
         
       run: |
-        cd "clo835_summer2023_Assignment1"/
+        cd "clo835_summer2023_assignment1"/
         ls -ltra
         # Docker build
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
@@ -47,7 +47,7 @@ jobs:
         IMAGE_TAG: v1.0
         
       run: |
-        cd "clo835_summer2023_Assignment1"/
+        cd "clo835_summer2023_assignment1"/
         ls -ltra
         # Docker build
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
