@@ -33,7 +33,7 @@ jobs:
         IMAGE_TAG: v1.0
         
       run: |
-        cd sql_app/
+        cd webapp/
         ls -ltra
         # Docker build
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
@@ -47,7 +47,7 @@ jobs:
         IMAGE_TAG: v1.0
         
       run: |
-        cd webapp/
+        cd sql_app/
         ls -ltra
         # Docker build
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
