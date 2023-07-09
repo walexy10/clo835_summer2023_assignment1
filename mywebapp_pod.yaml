@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mywebapp
+  labels:
+    role: mywebapp
+spec:
+  containers:
+  - name: mywebapp
+    image: 344625735300.dkr.ecr.us-east-1.amazonaws.com/mywebapp:v1.0
+    ports:
+    - containerPort: 8080
+    env:
+    - name: DBUSER
+      value: "root"
+    - name: DBPWD
+      value: "os"
+    - name: DBPORT
+      value: "3306"
+    - name: DBHOST(IP address of running mysql pod)
+      value: "10.244.0.5"
+  imagePullSecrets:
+  - name: regcred
